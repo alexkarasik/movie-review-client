@@ -50,28 +50,6 @@ const onChangePassword = function (event) {
 };
 
 
-// const onShowGames = function (event) {
-//   event.preventDefault();
-//   api.showGames()
-//  .then(function (response) {
-//     $('.message').text('Number of Played Games is ' + response.games.length);
-//  })
-//  .catch(ui.failure);
-// };
-
-
-// const onCreateGames = function (event) {
-//   event.preventDefault();
-//   api.createGames()
-//     .then((response) => {
-//       store.game = response.game;
-//       return store.game;
-//     })
-//  .then(ui.createGameSuccess)
-//  .catch(ui.failure);
-//  //engine.resetGameBoard();
-// };
-
 const addHandlers = () => {
   $('#change-password').hide();
   $('.after-signin').hide();
