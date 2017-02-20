@@ -61,21 +61,24 @@ const createReview = function() {
   });
 };
 
-const deleteComment = function () {
+const deleteReview = function () {
   return $.ajax({
-    url: `${config.apiOrigin}/comments/${store.user.id}`,
+    url: `${config.apiOrigin}/reviews/${store.user.id}`,
     method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`,
     },
   });
+};
+
+
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  searchReviews,
+  showReviews,
   createReview,
-  updateReview
+  deleteReview
 };
