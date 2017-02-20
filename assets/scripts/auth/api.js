@@ -3,14 +3,14 @@ const config = require('../config');
 const store = require('../store');
 
 
-const signUp = function (data) {
+const signUp = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-up',
     method: 'POST',
     data,
   });
 };
-const signIn = function (data) {
+const signIn = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/sign-in',
     method: 'POST',
@@ -18,7 +18,7 @@ const signIn = function (data) {
   });
 };
 
-const changePassword = function (data) {
+const changePassword = function(data) {
   return $.ajax({
     url: `${config.apiOrigin}/change-password/${store.user.id}`,
     method: 'PATCH',
@@ -30,7 +30,7 @@ const changePassword = function (data) {
 };
 
 
-const signOut = function () {
+const signOut = function() {
   return $.ajax({
     url: `${config.apiOrigin}/sign-out/${store.user.id}`,
     method: 'DELETE',
@@ -45,91 +45,39 @@ const searchReviews = function() {
     url: config.apiOrigin + '/reviews',
     method: 'GET',
     headers: {
-    Authorization: `Token token=${store.user.token}`
-  },
+      Authorization: `Token token=${store.user.token}`
+    },
   });
 };
 
-const showGames = function () {
+const createReview = function() {
   return $.ajax({
-    url: config.apiOrigin + '/games',
-    method: 'GET',
+    url: config.apiOrigin + '/reviews',
     headers: {
-    Authorization: `Token token=${store.user.token}`
-  },
+      Authorization: `Token token=${store.user.token}`,
+    },
+    method: 'POST',
+    data,
   });
 };
 
-// const createGames = function (data) {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games',
-//     method: 'POST',
-//     headers: {
-//     Authorization: `Token token=${store.user.token}`
-//   },
-//   data
-//   });
-// };
-//
-// const updateGame = function(index, currentPlayer, over) {
-//   return $.ajax({
-//     url: config.apiOrigin + '/games/' + store.game.id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: `Token token=${store.user.token}`
-//     },
-//     data: {
-//       game: {
-//         cell: {
-//           index: index,
-//           value: currentPlayer,
-//         },
-//         over: over,
-//       }
-//     },
-//   });
-// };
+const updateReview = function(ID, data) {
+  return $.ajax({
+    url: config.apiOrigin + '/reviews/' + ID,
+    headers: {
+      Authorization: `Token token=${store.user.token}`,
+    },
+    method: 'PATCH',
+    data
+  });
+};
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   searchReviews,
-  //createGames,
-  showGames,
-  //updateGame,
+  createReview,
+  updateReview
 };
-
-
-
-// const updateGame = function(id){
-//   return $.ajax({
-//     url: config.apiOrigin + '/games/' + id,
-//     method: 'PATCH',
-//     headers: {
-//       data: {
-//         game: {
-//           index: {
-//             cell: {
-//               index: '',
-//               value: 'X',
-//             },
-//             over: gameOver,
-//           }
-//         }
-//       }
-//     }
-//   }
-// );};
-
-//const updateGamesuccess
-// module.exports = {
-//   signUp,
-//   signIn,
-//   changePassword,
-//   signOut,
-//   createGame,
-//   showHistory,
-//   index,
-//   updateTTC,
-// };
