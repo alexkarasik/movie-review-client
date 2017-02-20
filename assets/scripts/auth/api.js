@@ -40,12 +40,12 @@ const signOut = function() {
   });
 };
 
-const searchReviews = function() {
+const showReviews = function () {
   return $.ajax({
     url: config.apiOrigin + '/reviews',
     method: 'GET',
     headers: {
-      Authorization: `Token token=${store.user.token}`
+      Authorization: 'Token token=${store.user.token}'
     },
   });
 };
@@ -61,16 +61,14 @@ const createReview = function() {
   });
 };
 
-const updateReview = function(ID, data) {
+const deleteComment = function () {
   return $.ajax({
-    url: config.apiOrigin + '/reviews/' + ID,
+    url: `${config.apiOrigin}/comments/${store.user.id}`,
+    method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`,
     },
-    method: 'PATCH',
-    data
   });
-};
 
 module.exports = {
   signUp,
