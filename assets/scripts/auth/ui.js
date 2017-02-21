@@ -19,23 +19,28 @@ const changePasswordSuccess = function () {
 };
 
 
+
 const signInSuccess = () => {
    $('#sign-up').val('');
    $('#sign-up').hide();
    $('#sign-in').hide();
    $('#change-password').show();
    $('.after-signin').show();
-   $('.message').text('Success!');
+   $('.message').text('Successful Sign In!');
    $('#sign-in')[0].reset();
 };
 const signOutSuccess = () => {
   $('.after-signin').hide();
-  $('#change-password').hide();
-  $('#headingOne').show();
-  $('#headingTwo').show();
-  $('#headingThree').hide();
-  $('#headingFour').hide();
-  $('.message').text('Successful Sign Out!');
+$('#change-password').hide();
+
+//$('.message').hide();
+// $('.games-played').hide().val('');
+$('#sign-in').show();
+$('#sign-up').show();
+// if (data) {
+//   console.log(data);
+// }
+$('.message').text('Success!');
 };
 
 

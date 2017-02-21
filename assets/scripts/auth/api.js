@@ -29,7 +29,6 @@ const changePassword = function(data) {
   });
 };
 
-
 const signOut = function() {
   return $.ajax({
     url: `${config.apiOrigin}/sign-out/${store.user.id}`,
@@ -50,7 +49,7 @@ const showReviews = function () {
   });
 };
 
-const createReview = function() {
+const createReview = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/reviews',
     headers: {
@@ -70,6 +69,8 @@ const deleteReview = function () {
     },
   });
 };
+
+
 
 
 
