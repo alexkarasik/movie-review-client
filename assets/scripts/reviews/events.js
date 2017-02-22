@@ -5,36 +5,29 @@ const ui = require('./ui.js');
 
 
 const getFormFields = require('../../../lib/get-form-fields.js');
+const store = require('../store');
 
-// get in the habit of naming your handlers, it eases debugging.
-//
-// also, follow a convention for handlers. here, I name my handler
-// beginning with 'on' to denote that it is done when the GET /s
-// button is clicked
 const onGetReviews = function (event) {
   event.preventDefault();
-  let data = getFormFields(event.target);
-
-  if (data.review.id.length === 0){
-      api.index()
-        .then(ui.onSuccess)
-        .catch(ui.onError);
-  } else {
-    api.show(data.review.id)
-      .then(ui.onSuccess)
-      .catch(ui.onError);
+  api.showreviews()
+  .then(function (response){
+    $('.review-entries').empty();
+      for (let i = 0; i < response.reviews.length; i++){
+        let movieId = `<div>Movie ID: ${response.reviews[i].movie_id}</div>`;
+        let review_entry = `<div> Review: ${response.reviews[i].note}</div>`;
+        $('.review-entries').append('<div>${movieId}${review_entry}</div>');
+      }
+  })
+    .catch(ui.onError);
+  };
   }
 
 };
 
 const onDeleteReview = function(event){
   event.preventDefault();
-  // let Id = $('#delete--id').val();
-  // multiple ways to do everything.
-  // However prefer this way.
-
   let data = getFormFields(event.target);
-  api.destroy(data.id)
+  api.destroyReviews(data.id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
@@ -43,7 +36,7 @@ const onPatchReview = function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  api.patch(data.review.id, data)
+  api.editReviews(data)
     .then(ui.onPatchSuccess)
     .catch(ui.onError);
 };
@@ -52,10 +45,21 @@ const onCreateReview = function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  api.post(data)
+  api.createReviews(data)
+    .then((response) => {
+      store.review = response.review;
+      return store.review;
+    })
     .then(ui.onPostSuccess)
     .catch(ui.onError);
 };
+
+const addHandlers = () => {
+  $('#show-reviews').on('click', onShowReview);
+  $('#delete-review').on('click', onDeleteReview);
+  $('#create-review').on('click', onCreateReview);
+  $('#change-review').on('click', onPatchReview);
+}
 
 
 module.exports = {

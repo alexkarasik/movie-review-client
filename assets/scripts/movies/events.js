@@ -34,7 +34,7 @@ const onDeleteMovie = function(event){
   // However prefer this way.
 
   let data = getFormFields(event.target);
-  api.destroy(data..id)
+  api.destroyMovies(data.id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
@@ -61,6 +61,6 @@ const onCreateReview = function(event){
 module.exports = {
   onGetReview,
   onDeleteBook,
-  onPatchBook,
+  onEditBook,
   onCreateBook
 };

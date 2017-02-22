@@ -5,8 +5,11 @@ h1{
   font-family: 'Germania One', cursive;
   text-align: center;
   color: red;
-  size: 48px;
-}
+  font-size: 65px;
+},
 body {
   background-image: url("http://www.wernerherzog.org/en/images/bg_fullscreen.jpg");
+},
+.panel {
+    width: 50%;
 }

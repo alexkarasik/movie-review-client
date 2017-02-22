@@ -7,7 +7,7 @@ const indexMovies = function () {
     url: config.apiOrigin + '/movies',
     method: 'GET',
     headers: {
-      Authorization: 'Token token=${store.user.token}'
+      Authorization: `Token token=${store.user.token}`
     },
   });
 };
@@ -17,7 +17,7 @@ const showMovies = function (id) {
     url: config.apiOrigin + '/movies/' + id,
     method: 'GET',
     headers: {
-      Authorization: 'Token token=${store.user.token}'
+      Authorization: `Token token=${store.user.token}`
     },
   });
 };
@@ -27,7 +27,7 @@ const destroyMovies = function(id){
     url: config.apiOrigin + '/movies/' + id,
     method: 'DELETE',
     headers: {
-      Authorization: 'Token token=${store.user.token}'
+      Authorization: `Token token=${store.user.token}`
     },
   });
 };

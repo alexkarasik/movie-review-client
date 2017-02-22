@@ -135,6 +135,38 @@
       </a>
     </h4>
   </div>
+  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+            <div class="panel-body">
+              <div class="review-container">
+                <button id="show-reviews">Show Reviews</button>
+                <div class="review-results"></div>
+                <form id="create-review">
+                  <fieldset>
+                    <legend id="reviews">Add Reviews</legend>
+                    <input type="number" name="review[movie_id]" placeholder="Movie ID">
+                    <input type="text" name="review[note]" placeholder="Comment">
+                    <input id="add-review" type="submit" value="Add Comment">
+                  </fieldset>
+                </form>
+                <form id="change-review">
+                  <fieldset>
+                    <legend class="change-review">Update Comment</legend>
+                    <input type="number" name="review[id]" placeholder="Comment ID">
+                    <input type="text" name="review[note]" placeholder="Comment">
+                    <input id="update-review" type="submit" value="Update Comment">
+                  </fieldset>
+                </form>
+                <form id="delete-review">
+                  <fieldset>
+                    <legend class="delete-review">Delete Comment</legend>
+                    <input type="number" name="reviews[id]" placeholder="Comment ID">
+                    <input id="delete-reviews" type="submit" value="Delete Comment">
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 </div>
 </body>
 
