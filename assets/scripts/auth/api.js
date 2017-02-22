@@ -78,7 +78,7 @@ module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut,
+  signOut
   // showReviews,
   // createReview,
   // deleteReview

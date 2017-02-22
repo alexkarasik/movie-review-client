@@ -1,6 +1,8 @@
 'use strict';
 
 const config = require('../config.js');
+const store = require('../store.js');
+
 
 const indexMovies = function () {
   return $.ajax({
@@ -12,9 +14,9 @@ const indexMovies = function () {
   });
 };
 
-const showMovies = function (id) {
+const showMovies = function () {
   return $.ajax({
-    url: config.apiOrigin + '/movies/' + id,
+    url: config.apiOrigin + '/movies',
     method: 'GET',
     headers: {
       Authorization: `Token token=${store.user.token}`

@@ -1,15 +1,25 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Germania+One');
-h1{
-  font-family: 'Germania One', cursive;
-  text-align: center;
+
+h1 {
   color: red;
+  font-family: 'Germania One', cursive;
   font-size: 65px;
+  text-align: center;
 },
+
 body {
-  background-image: url("http://www.wernerherzog.org/en/images/bg_fullscreen.jpg");
-},
+  background-image: url("https://scottishdocinstitute.files.wordpress.com/2011/09/2005_grizzly_man_018.jpg");
+}
+
 .panel {
-    width: 50%;
+  width: 50%;
+}
+
+.message{
+  color: red;
+  font-family: 'Germania One', cursive;
+  font-size: 36px;
+  text-align: left;
 }

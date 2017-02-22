@@ -41,11 +41,11 @@ const onChangePassword = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.changePassword(data)
-  .then(function (response) {
-    $('.message').text("password changed");
-    $('#change-password')[0].reset();
-  })
- .then(ui.success)
+  // .then(function (response) {
+  //   $('.message').text("password changed");
+  //   $('#change-password')[0].reset();
+  // })
+ .then(ui.changePasswordSuccess)
  .catch(ui.failure);
 };
 

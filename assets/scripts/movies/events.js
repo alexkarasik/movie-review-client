@@ -13,33 +13,29 @@ const getFormFields = require('../../../lib/get-form-fields.js');
 // button is clicked
 const onGetMovies = function (event) {
   event.preventDefault();
-  let data = getFormFields(event.target);
-
-  if (data.review.id.length === 0){
-      api.index()
-        .then(ui.onSuccess)
-        .catch(ui.onError);
-  } else {
-    api.show(data.review.id)
-      .then(ui.onSuccess)
-      .catch(ui.onError);
-  }
-
-};
+  api.showMovies()
+  .then(function (response){
+    // $('.movie-entries').empty();
+    console.log(response);
+      for (let i = 0; i <= response.movies.length; i++){
+        let movieTitle = `<div>Movie Title: ${response.movies[i].title}</div>`;
+      //  let review_entry = `<div> Review: ${response.reviews[i].note}</div>`;
+        $('.movie-results').append(`<div>${movieTitle}</div>`);
+      }
+  })
+    .catch(ui.onError);
+  };
 
 const onDeleteMovie = function(event){
   event.preventDefault();
-  // let Id = $('#delete--id').val();
-  // multiple ways to do everything.
-  // However prefer this way.
 
   let data = getFormFields(event.target);
-  api.destroyMovies(data.id)
+  api.destroyMovies(data.reviews.id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
 
-const onPatchReview = function(event){
+const onPatchMovie= function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
@@ -48,7 +44,7 @@ const onPatchReview = function(event){
     .catch(ui.onError);
 };
 
-const onCreateReview = function(event){
+const onCreateMovie = function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
@@ -56,11 +52,19 @@ const onCreateReview = function(event){
     .then(ui.onPostSuccess)
     .catch(ui.onError);
 };
+const addHandlers = () => {
+  $('#show-movies').on('click', onGetMovies);
+  $('#delete-movies').on('click', onDeleteMovie);
+  $('#create-movies').on('click', onCreateMovie);
+  $('#change-movies').on('click', onPatchMovie);
+};
+
 
 
 module.exports = {
-  onGetReview,
-  onDeleteBook,
-  onEditBook,
-  onCreateBook
+  onGetMovies,
+  onDeleteMovie,
+  onPatchMovie,
+  onCreateMovie,
+  addHandlers
 };

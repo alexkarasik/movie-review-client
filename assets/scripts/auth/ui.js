@@ -14,11 +14,9 @@ const signUpSuccess = () => {
   $('.message').text('Successful Sign Up!');
 };
 
-const changePasswordSuccess = function () {
+const changePasswordSuccess = () => {
   $('.message').text('Password Changed!');
 };
-
-
 
 const signInSuccess = () => {
    $('#sign-up').val('');
@@ -40,7 +38,7 @@ $('#sign-up').show();
 // if (data) {
 //   console.log(data);
 // }
-$('.message').text('Success!');
+$('.message').text('Successful Sign Out!');
 };
 
 

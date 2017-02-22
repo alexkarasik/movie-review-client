@@ -15,7 +15,7 @@ const onGetReviews = function (event) {
       for (let i = 0; i < response.reviews.length; i++){
         let movieId = `<div>Movie ID: ${response.reviews[i].movie_id}</div>`;
         let review_entry = `<div> Review: ${response.reviews[i].note}</div>`;
-        $('.review-entries').append('<div>${movieId}${review_entry}</div>');
+        $('.review-entries').append(`<div>${movieId}${review_entry}</div>`);
       }
   })
     .catch(ui.onError);
@@ -55,7 +55,7 @@ const onCreateReview = function(event){
 };
 
 const addHandlers = () => {
-  $('#show-reviews').on('click', onShowReview);
+  $('#show-reviews').on('click', onGetReviews);
   $('#delete-review').on('click', onDeleteReview);
   $('#create-review').on('click', onCreateReview);
   $('#change-review').on('click', onPatchReview);
@@ -66,5 +66,6 @@ module.exports = {
   onGetReviews,
   onDeleteReview,
   onPatchReview,
-  onCreateReview
+  onCreateReview,
+  addHandlers
 };
