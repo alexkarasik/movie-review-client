@@ -1,2 +1,12 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+h1{
+  font-family: 'Germania One', cursive;
+  text-align: center;
+  color: red;
+  size: 48px;
+}
+body {
+  background-image: url("http://www.wernerherzog.org/en/images/bg_fullscreen.jpg");
+}

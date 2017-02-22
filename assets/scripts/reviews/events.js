@@ -34,7 +34,7 @@ const onDeleteReview = function(event){
   // However prefer this way.
 
   let data = getFormFields(event.target);
-  api.destroy(data..id)
+  api.destroy(data.id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
@@ -59,8 +59,8 @@ const onCreateReview = function(event){
 
 
 module.exports = {
-  onGetReview,
-  onDeleteBook,
-  onPatchBook,
-  onCreateBook
+  onGetReviews,
+  onDeleteReview,
+  onPatchReview,
+  onCreateReview
 };

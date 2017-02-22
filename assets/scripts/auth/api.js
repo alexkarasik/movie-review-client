@@ -39,36 +39,36 @@ const signOut = function() {
   });
 };
 
-const showReviews = function () {
-  return $.ajax({
-    url: config.apiOrigin + '/reviews',
-    method: 'GET',
-    headers: {
-      Authorization: 'Token token=${store.user.token}'
-    },
-  });
-};
-
-const createReview = function(data) {
-  return $.ajax({
-    url: config.apiOrigin + '/reviews',
-    headers: {
-      Authorization: `Token token=${store.user.token}`,
-    },
-    method: 'POST',
-    data,
-  });
-};
-
-const deleteReview = function () {
-  return $.ajax({
-    url: `${config.apiOrigin}/reviews/${store.user.id}`,
-    method: 'DELETE',
-    headers: {
-      Authorization: `Token token=${store.user.token}`,
-    },
-  });
-};
+// const showReviews = function () {
+//   return $.ajax({
+//     url: config.apiOrigin + '/reviews',
+//     method: 'GET',
+//     headers: {
+//       Authorization: 'Token token=${store.user.token}'
+//     },
+//   });
+// };
+//
+// const createReview = function(data) {
+//   return $.ajax({
+//     url: config.apiOrigin + '/reviews',
+//     headers: {
+//       Authorization: `Token token=${store.user.token}`,
+//     },
+//     method: 'POST',
+//     data,
+//   });
+// };
+//
+// const deleteReview = function () {
+//   return $.ajax({
+//     url: `${config.apiOrigin}/reviews/${store.user.id}`,
+//     method: 'DELETE',
+//     headers: {
+//       Authorization: `Token token=${store.user.token}`,
+//     },
+//   });
+// };
 
 
 
@@ -79,7 +79,7 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  showReviews,
-  createReview,
-  deleteReview
+  // showReviews,
+  // createReview,
+  // deleteReview
 };
