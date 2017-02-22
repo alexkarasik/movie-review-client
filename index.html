@@ -142,29 +142,36 @@
                 <div class="movie-results"></div>
                 <button id="show-reviews">Show Reviews</button>
                 <div class="review-results"></div>
-                <form id="create-review">
-                  <fieldset>
-                    <legend id="reviews">Add Reviews</legend>
-                    <input type="number" name="review[movie_id]" placeholder="Movie ID">
-                    <input type="text" name="review[note]" placeholder="Review">
-                    <input id="add-review" type="submit" value="Add Review">
-                  </fieldset>
-                </form>
+
+                <div class="">
+
+                  <form id="create-review">
+                    <fieldset>
+                      <legend id="reviews">Add Reviews</legend>
+                      <input type="number" name="review[movie_id]" placeholder="Movie ID">
+                      <input type="text" name="review[review_entry]" placeholder="Review">
+                      <input id="add-review" type="submit" value="Add Review">
+                    </fieldset>
+                  </form>
+                </div>
+
                 <form id="change-review">
                   <fieldset>
                     <legend class="change-review">Update Review</legend>
-                    <input type="number" name="review[id]" placeholder="Movie ID">
-                    <input type="text" name="review[note]" placeholder="Review">
+                    <input type="number" name="review[movie_id]" placeholder="Movie ID">
+                    <input type="text" name="review[review_entry]" placeholder="Review">
                     <input id="update-review" type="submit" value="Update Review">
                   </fieldset>
                 </form>
+
                 <form id="delete-review">
                   <fieldset>
                     <legend class="delete-review">Delete Review</legend>
-                    <input type="number" name="reviews[id]" placeholder="Movie ID">
+                    <input type="number" name="reviews[movie_id]" placeholder="Movie ID">
                     <input id="delete-reviews" type="submit" value="Delete Review">
                   </fieldset>
                 </form>
+
               </div>
             </div>
           </div>

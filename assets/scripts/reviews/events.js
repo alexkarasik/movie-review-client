@@ -45,20 +45,21 @@ const onCreateReview = function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
+  console.log(data)
   api.createReviews(data)
-    .then((response) => {
-      store.review = response.review;
-      return store.review;
-    })
+    // .then((response) => {
+    //   store.review = response.review;
+    //   return store.review;
+    // })
     .then(ui.onPostSuccess)
     .catch(ui.onError);
 };
 
 const addHandlers = () => {
   $('#show-reviews').on('click', onGetReviews);
-  $('#delete-review').on('click', onDeleteReview);
-  $('#create-review').on('click', onCreateReview);
-  $('#change-review').on('click', onPatchReview);
+  $('#delete-review').on('submit', onDeleteReview);
+  $('#create-review').on('submit', onCreateReview);
+  $('#change-review').on('submit', onPatchReview);
 };
 
 

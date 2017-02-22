@@ -2,10 +2,10 @@
 
 const onSuccess = function (data) {
 //  debugger;
-  if (data.book) {
-    console.log(data.book);
+  if (data.review) {
+    console.log(data.review);
   } else {
-    console.table(data.books);
+    console.table(data.reviews);
   }
 };
 
