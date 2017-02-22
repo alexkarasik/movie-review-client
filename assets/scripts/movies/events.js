@@ -15,12 +15,15 @@ const onGetMovies = function (event) {
   event.preventDefault();
   api.showMovies()
   .then(function (response){
-    // $('.movie-entries').empty();
+    $('.movie-results').empty();
     console.log(response);
-      for (let i = 0; i <= response.movies.length; i++){
+      for (let i = 0; i < response.movies.length; i++){
         let movieTitle = `<div>Movie Title: ${response.movies[i].title}</div>`;
-      //  let review_entry = `<div> Review: ${response.reviews[i].note}</div>`;
-        $('.movie-results').append(`<div>${movieTitle}</div>`);
+        let movieLength = `<div>Movie Length: ${response.movies[i].length}</div>`;
+        let movieRating = `<div>Movie Rating: ${response.movies[i].rating}</div>`;
+        let movieDescription = `<div>Movie Description: ${response.movies[i].description}</div>`;
+
+        $('.movie-results').append(`<div>${movieTitle}${movieLength}${movieRating}${movieDescription}</div>`);
       }
   })
     .catch(ui.onError);
