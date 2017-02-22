@@ -13,9 +13,9 @@ const indexReviews = function () {
   });
 };
 
-const showReviews = function (id) {
+const showReviews = function () {
   return $.ajax({
-    url: config.apiOrigin + '/reviews/' + id,
+    url: config.apiOrigin + '/reviews',
     method: 'GET',
     headers: {
       Authorization: `Token token=${store.user.token}`,

@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
 const auth = require('./auth/events');
 const movies = require('./movies/events');
+const reviews = require('./reviews/events');
 
 $(() => {
   setAPIOrigin(location, config);
@@ -19,4 +20,5 @@ require('./example');
 $(()=> {
   auth.addHandlers();
   movies.addHandlers();
+  reviews.addHandlers();
 });
