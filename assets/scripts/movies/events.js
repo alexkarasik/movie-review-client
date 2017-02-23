@@ -57,9 +57,9 @@ const onCreateMovie = function(event){
 };
 const addHandlers = () => {
   $('#show-movies').on('click', onGetMovies);
-  $('#delete-movies').on('click', onDeleteMovie);
+  $('#delete-movie').on('click', onDeleteMovie);
   $('#create-movies').on('click', onCreateMovie);
-  $('#change-movies').on('click', onPatchMovie);
+  $('#change-movie').on('click', onPatchMovie);
 };
 
 

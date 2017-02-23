@@ -145,6 +145,34 @@
 
                 <div class="">
 
+                  <form id="create-movies">
+                    <fieldset>
+                      <legend id="reviews">Add Movies</legend>
+                      <input type="number" name="movie[movie_id]" placeholder="Movie ID">
+                      <input type="text" name="movie[review_entry]" placeholder="Movie">
+                      <input id="add-movie" type="submit" value="Add Movie">
+                    </fieldset>
+                  </form>
+                </div>
+
+                <form id="change-movie">
+                  <fieldset>
+                      <legend class="change-review">Update Movie</legend>
+                    <input type="number" name="review[id]" placeholder="Review ID">
+                    <input type="number" name="review[movie_id]" placeholder="Movie ID">
+                    <input type="text" name="review[review_entry]" placeholder="Review">
+                    <input id="update-review" type="submit" value="Update Review">
+                  </fieldset>
+                </form>
+
+                <form id="delete-movie">
+                  <fieldset>
+                    <legend class="delete-review">Delete Movie</legend>
+                    <input type="number" name="movie[id]" placeholder="Movie ID">
+                    <input id="delete-movie" type="submit" value="Delete Movie">
+                  </fieldset>
+                </form>
+
                   <form id="create-review">
                     <fieldset>
                       <legend id="reviews">Add Reviews</legend>
