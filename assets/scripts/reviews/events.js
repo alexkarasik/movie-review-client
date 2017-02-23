@@ -14,9 +14,10 @@ const onGetReviews = function (event) {
     $('.review-results').empty();
     console.log(response);
       for (let i = 0; i < response.reviews.length; i++){
+        let reviewId = `<div>Review ID: ${response.reviews[i].id}</div>`;
         let movieId = `<div>Movie ID: ${response.reviews[i].movie_id}</div>`;
         let review_entry = `<div> Review: ${response.reviews[i].review_entry}</div>`;
-        $('.review-results').append(`<div>${movieId}${review_entry}</div>`);
+        $('.review-results').append(`<div>${reviewId}${movieId}${review_entry}</div>`);
       }
   })
     .catch(ui.onError);
@@ -27,16 +28,15 @@ const onGetReviews = function (event) {
 const onDeleteReview = function(event){
   event.preventDefault();
   let data = getFormFields(event.target);
-  api.destroyReviews(data.id)
+  api.destroyReviews(data.review.id, data)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
 
 const onPatchReview = function(event){
   event.preventDefault();
-
   let data = getFormFields(event.target);
-  api.editReviews(data)
+  api.editReviews(data.review.id, data)
     .then(ui.onPatchSuccess)
     .catch(ui.onError);
 };
@@ -45,7 +45,7 @@ const onCreateReview = function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  console.log(data)
+  console.log(data);
   api.createReviews(data)
     // .then((response) => {
     //   store.review = response.review;

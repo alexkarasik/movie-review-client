@@ -29,7 +29,7 @@ const destroyReviews = function(id){
     method: 'DELETE',
     headers: {
       Authorization: `Token token=${store.user.token}`,
-    },
+    }
   });
 };
 
@@ -39,9 +39,9 @@ const editReviews = function(id, data){
     url: config.apiOrigin + '/reviews/' + id,
     method: 'PATCH',
     headers: {
-      Authorization: `Token token=${store.user.token}`,
+      Authorization: `Token token=${store.user.token}`
     },
-    data,
+    data
   });
 };
 

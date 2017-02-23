@@ -1,28 +1,29 @@
 'use strict';
 
 const onSuccess = function (data) {
-//  debugger;
+ debugger;
   if (data.review) {
     console.log(data.review);
+    $('.message').text('SUCCESS!');
   } else {
     console.table(data.reviews);
   }
 };
 
 const onError = function (response) {
-  console.error(response);
+    $('.message').text('ERROR!');
 };
 
 const onDeleteSuccess = function () {
-  console.log('Your review was successfully deleted.');
+  $('.message').text('Your review was successfully deleted.');
 };
 
 const onPatchSuccess = function () {
-  console.log('Your review was successfully edited.');
+  $('.message').text('Your review was successfully edited.');
 };
 
 const onPostSuccess = function () {
-  console.log('Your review was successfully created.');
+  $('.message').text('Your review was successfully created.');
 };
 
 module.exports = {
