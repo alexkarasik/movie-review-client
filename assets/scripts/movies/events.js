@@ -2,7 +2,7 @@
 
 const api = require('./api.js');
 const ui = require('./ui.js');
-
+const movieHandlebars = require('../templates/movieHandlebars.handlebars');
 
 const getFormFields = require('../../../lib/get-form-fields.js');
 
@@ -18,12 +18,9 @@ const onGetMovies = function (event) {
     $('.movie-results').empty();
     console.log(response);
       for (let i = 0; i < response.movies.length; i++){
-        let movieTitle = `<div>Movie Title: ${response.movies[i].title}</div>`;
-        let movieLength = `<div>Movie Length: ${response.movies[i].length}</div>`;
-        let movieRating = `<div>Movie Rating: ${response.movies[i].rating}</div>`;
-        let movieDescription = `<div>Movie Description: ${response.movies[i].description}</div>`;
+        let movie = movieHandlebars(response.movies[i]);
 
-        $('.movie-results').append(`<div>${movieTitle}${movieLength}${movieRating}${movieDescription}</div>`);
+        $('.movie-results').append(movie);
       }
   })
     .catch(ui.onError);
