@@ -51,7 +51,7 @@ const onCreateMovie = function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  api.post(data)
+  api.createMovies(data)
     .then(ui.onPostSuccess)
     .catch(ui.onError);
 };

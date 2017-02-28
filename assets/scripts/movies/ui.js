@@ -14,21 +14,25 @@ const onError = function (response) {
 };
 
 const onDeleteSuccess = function () {
-  console.log('Your review was successfully deleted.');
+  console.log('Your movie was successfully deleted.');
 };
 
-const onPatchSuccess = function () {
-  console.log('Your review was successfully edited.');
+const onUpdateMovie = function () {
+      $('.message').text('Your movie was successfully edited.');
 };
 
-const onPostSuccess = function () {
-  console.log('Your review was successfully created.');
+const onCreateMovie = function () {
+    $('.message').text('Your movie was successfully created.');
+
+
+
+
 };
 
 module.exports = {
   onSuccess,
   onError,
   onDeleteSuccess,
-  onPatchSuccess,
-  onPostSuccess
+  onUpdateMovie,
+  onCreateMovie
 };

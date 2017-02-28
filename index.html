@@ -52,131 +52,165 @@
         </div>
       </div>
     </div>
-      <div class="panel-heading" role="tab" id="headingTwo">
-        <h4 class="panel-title">
+
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
           Sign In
         </a>
-</h4>
-      </div>
-      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-        <div class="panel-body">
-          <form id="sign-in">
-            <fieldset>
-              <legend>Sign in!</legend>
-              <label>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        <form id="sign-in">
+          <fieldset>
+            <legend>Sign in!</legend>
+            <label>
             Email
             <input type="text" name="credentials[email]">
           </label>
-              <label>
+            <label>
             Password
             <input type="password" name="credentials[password]">
           </label>
-              <input type="submit" name="submit" value="Sign in!">
-            </fieldset>
-          </form>
-        </div>
+            <input type="submit" name="submit" value="Sign in!">
+          </fieldset>
+        </form>
       </div>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading" role="tab" id="headingThree">
-        <h4 class="panel-title">
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
           Change Password
         </a>
 </h4>
-      </div>
-      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-        <div class="panel-body">
-          <form id="change-password">
-            <fieldset>
-              <legend>Change Password!</legend>
-              <label>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        <form id="change-password">
+          <fieldset>
+            <legend>Change Password!</legend>
+            <label>
             Current Password
             <input type="password" name="passwords[old]">
           </label>
-              <label>
+            <label>
             New Password
             <input type="password" name="passwords[new]">
           </label>
 
-              <input type="submit" name="submit" value="Change Password!">
-            </fieldset>
-          </form>
-        </div>
+            <input type="submit" name="submit" value="Change Password!">
+          </fieldset>
+        </form>
       </div>
     </div>
+  </div>
 
 
-    <div class="panel">
-      <div class="panel-heading" role="tab" id="headingFour">
-        <h4 class="panel-title">
+  <div class="panel">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
         <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
           Sign-Out
         </a>
                  </h4>
-      </div>
-      <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-        <div class="panel-body">
-          <form id="sign-out">
-            <fieldset>
-              <legend>Sign Out!</legend>
-              <input type="submit" name="submit" value="Sign Out!">
-            </fieldset>
-          </form>
-        </div>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+        <form id="sign-out">
+          <fieldset>
+            <legend>Sign Out!</legend>
+            <input type="submit" name="submit" value="Sign Out!">
+          </fieldset>
+        </form>
       </div>
     </div>
-    <div class="panel">
-  <div class="panel-heading" role="tab" id="headingFive">
-    <h4 class="panel-title">
+  </div>
+  <div class="panel">
+    <div class="panel-heading" role="tab" id="headingFive">
+      <h4 class="panel-title">
       <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
         Movies
       </a>
     </h4>
-  </div>
-  <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
-            <div class="panel-body">
-              <div class="review-container">
-                <button id="show-movies">Show Movies</button>
-                <div class="movie-results"></div>
-                <button id="show-reviews">Show Reviews</button>
-                <div class="review-results"></div>
+    </div>
+    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+      <div class="panel-body">
+        <div class="results-container">
+          <button id="show-movies">Show Movies</button>
+          <div class="movie-results"></div>
+          <button id="show-reviews">Show Reviews</button>
+          <div class="review-results"></div>
 
-                <div class="">
-
-                  <form id="create-review">
-                    <fieldset>
-                      <legend id="reviews">Add Reviews</legend>
-                      <input type="number" name="review[movie_id]" placeholder="Movie ID">
-                      <input type="text" name="review[review_entry]" placeholder="Review">
-                      <input id="add-review" type="submit" value="Add Review">
-                    </fieldset>
-                  </form>
-                </div>
-
-                <form id="change-review">
-                  <fieldset>
-                    <legend class="change-review">Update Review</legend>
-                    <input type="number" name="review[id]" placeholder="Review ID">
-                    <input type="number" name="review[movie_id]" placeholder="Movie ID">
-                    <input type="text" name="review[review_entry]" placeholder="Review">
-                    <input id="update-review" type="submit" value="Update Review">
-                  </fieldset>
-                </form>
-
-                <form id="delete-review">
-                  <fieldset>
-                    <legend class="delete-review">Delete Review</legend>
-                    <input type="number" name="review[id]" placeholder="Review ID">
-                    <input id="delete-review" type="submit" value="Delete Review">
-                  </fieldset>
-                </form>
-
-              </div>
-            </div>
-          </div>
+          <form id="create-movies">
+            <fieldset>
+              <legend id="addMovies">Add Movies</legend>
+              <input type="number" name="movieid[movie_id]" placeholder="Movie ID">
+              <input type="text" name="title[movie_title]" placeholder="movieTitle">
+              <input type="number" name="length[movie_length]" placeholder="movieLength">
+              <input type="text" name="rating[movie_rating]" placeholder="movieRating">
+              <input type="text" name="description[movie_description]" placeholder="movieDescription">
+              <input id="add-movie" type="submit" value="Add Movie">
+            </fieldset>
+          </form>
         </div>
+
+        <form id="change-movie">
+          <fieldset>
+            <legend class="change-review">Update Movie</legend>
+            <input type="number" name="movie[id]" placeholder="Movie ID">
+            <input type="text" name="updatedReview[review_update]" placeholder="Review">
+            <input type="text" name="title[movie_title]" placeholder="movieTitle">
+            <input type="number" name="length[movie_length]" placeholder="movieLength">
+            <input type="text" name="rating[movie_rating]" placeholder="movieRating">
+            <input id="update-movie" type="submit" value="Update Movie">
+          </fieldset>
+        </form>
+
+        <form id="delete-movie">
+          <fieldset>
+            <legend class="delete-review">Delete Review</legend>
+            <input type="number" name="movie[id]" placeholder="Movie ID">
+            <input id="delete-movie" type="submit" value="Delete movie">
+          </fieldset>
+        </form>
+
+
+
+            <form id="create-review">
+              <fieldset>
+                <legend id="reviews">Add Reviews</legend>
+                <input type="number" name="review[movie_id]" placeholder="Movie ID">
+                <input type="text" name="review[review_entry]" placeholder="Review">
+                <input id="add-review" type="submit" value="Add Review">
+              </fieldset>
+            </form>
+          </div>
+
+          <form id="change-review">
+            <fieldset>
+              <legend class="change-review">Update Review</legend>
+              <input type="number" name="review[id]" placeholder="Review ID">
+              <input type="number" name="review[movie_id]" placeholder="Movie ID">
+              <input type="text" name="review[review_entry]" placeholder="Review">
+              <input id="update-review" type="submit" value="Update Review">
+            </fieldset>
+          </form>
+
+          <form id="delete-review">
+            <fieldset>
+              <legend class="delete-review">Delete Review</legend>
+              <input type="number" name="review[id]" placeholder="Review ID">
+              <input id="delete-review" type="submit" value="Delete Review">
+            </fieldset>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
