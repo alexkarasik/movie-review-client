@@ -1,12 +1,14 @@
 'use strict';
 
+const movieHandlebars = require('../templates/movieHandlebars.handlebars');
+
 const onSuccess = function (data) {
-//  debugger;
-  if (data.movies) {
-    console.log(data.movies);
-  } else {
-    console.table(data.movies);
+
+  if (data) {
+    console.log(data);
   }
+  let showMovies = movieHandlebars({ movies: data.movies});
+  $('.movie-results').empty().append(showMovies);
 };
 
 const onError = function (response) {

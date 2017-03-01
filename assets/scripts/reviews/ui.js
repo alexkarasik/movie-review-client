@@ -1,14 +1,15 @@
 'use strict';
+const reviewHandlebars = require('../templates/reviewHandlebars.handlebars');
 
 const onSuccess = function (data) {
- debugger;
-  if (data.review) {
-    console.log(data.review);
-    $('.message').text('SUCCESS!');
-  } else {
-    console.table(data.reviews);
-  }
-};
+    //  debugger;
+      if (data) {
+        console.log(data);
+      }
+      let showResults = reviewHandlebars({ reviews: data.reviews});
+      $('.review-results').empty().append(showResults);
+    };
+
 
 const onError = function (response) {
     $('.message').text('ERROR!');
