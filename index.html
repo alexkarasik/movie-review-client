@@ -147,11 +147,10 @@
           <form id="create-movies">
             <fieldset>
               <legend id="addMovies">Add Movies</legend>
-              <input type="number" name="movieid[movie_id]" placeholder="Movie ID">
-              <input type="text" name="title[movie_title]" placeholder="movieTitle">
-              <input type="number" name="length[movie_length]" placeholder="movieLength">
-              <input type="text" name="rating[movie_rating]" placeholder="movieRating">
-              <input type="text" name="description[movie_description]" placeholder="movieDescription">
+              <input type="text" name="movie[title]" placeholder="movieTitle">
+              <input type="number" name="movie[length]" placeholder="movieLength">
+              <input type="text" name="movie[rating]" placeholder="movieRating">
+              <input type="text" name="movie[description]" placeholder="movieDescription">
               <input id="add-movie" type="submit" value="Add Movie">
             </fieldset>
           </form>
@@ -159,19 +158,19 @@
 
         <form id="change-movie">
           <fieldset>
-            <legend class="change-review">Update Movie</legend>
+            <legend class="change-movie">Update Movie</legend>
             <input type="number" name="movie[id]" placeholder="Movie ID">
-            <input type="text" name="updatedReview[review_update]" placeholder="Review">
-            <input type="text" name="title[movie_title]" placeholder="movieTitle">
-            <input type="number" name="length[movie_length]" placeholder="movieLength">
-            <input type="text" name="rating[movie_rating]" placeholder="movieRating">
+            <input type="text" name="movie[title]" placeholder="Title">
+            <input type="number" name="movie[length]" placeholder="Length">
+            <input type="text" name="movie[rating]" placeholder="Rating">
+            <input type="text" name="movie[description]" placeholder="Description">
             <input id="update-movie" type="submit" value="Update Movie">
           </fieldset>
         </form>
 
         <form id="delete-movie">
           <fieldset>
-            <legend class="delete-review">Delete Review</legend>
+            <legend class="delete-review">Delete Movie</legend>
             <input type="number" name="movie[id]" placeholder="Movie ID">
             <input id="delete-movie" type="submit" value="Delete movie">
           </fieldset>
@@ -208,7 +207,7 @@
           </form>
 
         </div>
-      </div>
+    movieReview-client  </div>
     </div>
   </div>
 

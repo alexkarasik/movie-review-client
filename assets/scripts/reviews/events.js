@@ -16,7 +16,7 @@ const onGetReviews = function (event) {
 const onDeleteReview = function(event){
   event.preventDefault();
   let data = getFormFields(event.target);
-  api.destroyReviews(data.review.id, data)
+  api.destroyReviews(data.review.id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
@@ -39,6 +39,7 @@ const onCreateReview = function(event){
     //   store.review = response.review;
     //   return store.review;
     // })
+    .then(onGetReviews)
     .then(ui.onPostSuccess)
     .catch(ui.onError);
 };

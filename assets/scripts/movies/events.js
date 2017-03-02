@@ -22,7 +22,7 @@ const onDeleteMovie = function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  api.destroyMovies(data.reviews.id)
+  api.destroyMovies(data.movie.id)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
@@ -31,7 +31,7 @@ const onPatchMovie= function(event){
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  api.patch(data.review.id, data)
+  api.editMovies(data.movie.id, data)
     .then(ui.onPatchSuccess)
     .catch(ui.onError);
 };
@@ -46,9 +46,9 @@ const onCreateMovie = function(event){
 };
 const addHandlers = () => {
   $('#show-movies').on('click', onGetMovies);
-  $('#delete-movies').on('click', onDeleteMovie);
-  $('#create-movies').on('click', onCreateMovie);
-  $('#change-movies').on('click', onPatchMovie);
+  $('#delete-movie').on('submit', onDeleteMovie);
+  $('#create-movies').on('submit', onCreateMovie);
+  $('#change-movie').on('submit', onPatchMovie);
 };
 
 

@@ -16,7 +16,7 @@ const onError = function (response) {
 };
 
 const onDeleteSuccess = function () {
-  console.log('Your movie was successfully deleted.');
+    $('.message').text('Your movie was successfully deleted.');
 };
 
 const onUpdateMovie = function () {

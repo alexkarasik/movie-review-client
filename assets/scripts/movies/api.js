@@ -29,7 +29,7 @@ const destroyMovies = function(id){
     url: config.apiOrigin + '/movies/' + id,
     method: 'DELETE',
     headers: {
-      Authorization: `Token token=${store.user.token}`
+      Authorization: `Token token=${store.user.token}`,
     },
   });
 };
@@ -40,20 +40,20 @@ const editMovies = function(id, data){
     url: config.apiOrigin + '/movies/' + id,
     method: 'PATCH',
     headers: {
-      Authorization: 'Token token=${store.user.token}'
+      Authorization: `Token token=${store.user.token}`
     },
     data,
   });
 };
 
-const createMovies = function(formData) {
+const createMovies = function(data) {
   return $.ajax({
     url: config.apiOrigin + '/movies/',
     method: 'POST',
     headers: {
-      Authorization: 'Token token=${store.user.token}'
+      Authorization: `Token token=${store.user.token}`
     },
-    data: formData,
+    data
   });
 };
 
