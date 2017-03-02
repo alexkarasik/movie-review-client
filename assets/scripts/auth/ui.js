@@ -22,6 +22,8 @@ const signInSuccess = () => {
    $('#sign-up').val('');
    $('#sign-up').hide();
    $('#sign-in').hide();
+   $('#headingOne').hide();
+   $('#headingTwo').hide();
    $('#change-password').show();
    $('.after-signin').show();
    $('.message').text('Successful Sign In!');

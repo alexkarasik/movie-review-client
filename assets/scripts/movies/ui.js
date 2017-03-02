@@ -1,12 +1,14 @@
 'use strict';
 
+const movieHandlebars = require('../templates/movieHandlebars.handlebars');
+
 const onSuccess = function (data) {
-//  debugger;
-  if (data.movies) {
-    console.log(data.movies);
-  } else {
-    console.table(data.movies);
+
+  if (data) {
+    console.log(data);
   }
+  let showMovies = movieHandlebars({ movies: data.movies});
+  $('.movie-results').empty().append(showMovies);
 };
 
 const onError = function (response) {
@@ -14,21 +16,25 @@ const onError = function (response) {
 };
 
 const onDeleteSuccess = function () {
-  console.log('Your review was successfully deleted.');
+    $('.message').text('Your movie was successfully deleted.');
 };
 
-const onPatchSuccess = function () {
-  console.log('Your review was successfully edited.');
+const onUpdateMovie = function () {
+      $('.message').text('Your movie was successfully edited.');
 };
 
-const onPostSuccess = function () {
-  console.log('Your review was successfully created.');
+const onCreateMovie = function () {
+    $('.message').text('Your movie was successfully created.');
+
+
+
+
 };
 
 module.exports = {
   onSuccess,
   onError,
   onDeleteSuccess,
-  onPatchSuccess,
-  onPostSuccess
+  onUpdateMovie,
+  onCreateMovie
 };
