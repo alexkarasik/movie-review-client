@@ -9,7 +9,7 @@ const failure = () => {
 };
 
 const signUpSuccess = () => {
-  $('#sign-up').hide();
+  $('#collapseOne').hide();
   $('#sign-up')[0].reset();
   $('.message').text('Successful Sign Up!');
 };
@@ -20,8 +20,8 @@ const changePasswordSuccess = () => {
 
 const signInSuccess = () => {
    $('#sign-up').val('');
-   $('#sign-up').hide();
-   $('#sign-in').hide();
+  //  $('#sign-up').hide();
+   $('.hide-sign').hide();
    $('#headingOne').hide();
    $('#headingTwo').hide();
    $('#change-password').show();
@@ -30,16 +30,12 @@ const signInSuccess = () => {
    $('#sign-in')[0].reset();
 };
 const signOutSuccess = () => {
-  $('.after-signin').hide();
+$('.after-signin').hide();
 $('#change-password').hide();
 
-//$('.message').hide();
-// $('.games-played').hide().val('');
-$('#sign-in').show();
-$('#sign-up').show();
-// if (data) {
-//   console.log(data);
-// }
+$('.hide-sign').show();
+$('#headingOne').show();
+
 $('.message').text('Successful Sign Out!');
 };
 
