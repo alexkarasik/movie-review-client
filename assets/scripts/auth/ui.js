@@ -9,7 +9,7 @@ const failure = () => {
 };
 
 const signUpSuccess = () => {
-  $('#collapseOne').hide();
+  //$('#collapseOne').hide();
   $('#sign-up')[0].reset();
   $('.message').text('Successful Sign Up!');
 };
@@ -32,9 +32,13 @@ const signInSuccess = () => {
 const signOutSuccess = () => {
 $('.after-signin').hide();
 $('#change-password').hide();
+//$('#change-password').hide();
+$("#collapseFive").hide();
+
 
 $('.hide-sign').show();
 $('#headingOne').show();
+
 
 $('.message').text('Successful Sign Out!');
 };
