@@ -9,37 +9,50 @@ const failure = () => {
 };
 
 const signUpSuccess = () => {
-  $('#sign-up').hide();
+  //$('#collapseOne').hide();
   $('#sign-up')[0].reset();
   $('.message').text('Successful Sign Up!');
 };
 
 const changePasswordSuccess = () => {
+
   $('.message').text('Password Changed!');
 };
 
 const signInSuccess = () => {
    $('#sign-up').val('');
-   $('#sign-up').hide();
-   $('#sign-in').hide();
+  //  $('#sign-up').hide();
+   $('.hide-sign').hide();
    $('#headingOne').hide();
    $('#headingTwo').hide();
-   $('#change-password').show();
-   $('.after-signin').show();
+  //  $('#change-password').show();
+  //  $('.after-signin').show();
+  //  $("#collapseFive").show();
+  //  $("#headingFive").show();
+  //  $("#collapseFour").show();
+  //  $("#headingFour").show();
+  //  $("#collapseThree").show();
+  //  $("#headingThree").show();
+
    $('.message').text('Successful Sign In!');
    $('#sign-in')[0].reset();
 };
 const signOutSuccess = () => {
-  $('.after-signin').hide();
+$('.after-signin').hide();
 $('#change-password').hide();
+//$('#change-password').hide();
+$("#collapseFive").hide();
+$("#headingFive").hide();
+$("#collapseFour").hide();
+$("#headingFour").hide();
+$("#collapseThree").hide();
+$("#headingThree").hide();
 
-//$('.message').hide();
-// $('.games-played').hide().val('');
-$('#sign-in').show();
-$('#sign-up').show();
-// if (data) {
-//   console.log(data);
-// }
+
+$('.hide-sign').show();
+$('#headingOne').show();
+
+
 $('.message').text('Successful Sign Out!');
 };
 
