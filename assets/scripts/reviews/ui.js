@@ -11,7 +11,7 @@ const onSuccess = function (data) {
     };
 
 
-const onError = function (response) {
+const onError = function () {
     $('.message').text('ERROR!');
 };
 
