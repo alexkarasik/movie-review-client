@@ -15,6 +15,7 @@ const signUpSuccess = () => {
 };
 
 const changePasswordSuccess = () => {
+
   $('.message').text('Password Changed!');
 };
 
@@ -24,8 +25,15 @@ const signInSuccess = () => {
    $('.hide-sign').hide();
    $('#headingOne').hide();
    $('#headingTwo').hide();
-   $('#change-password').show();
-   $('.after-signin').show();
+  //  $('#change-password').show();
+  //  $('.after-signin').show();
+  //  $("#collapseFive").show();
+  //  $("#headingFive").show();
+  //  $("#collapseFour").show();
+  //  $("#headingFour").show();
+  //  $("#collapseThree").show();
+  //  $("#headingThree").show();
+
    $('.message').text('Successful Sign In!');
    $('#sign-in')[0].reset();
 };
@@ -34,6 +42,11 @@ $('.after-signin').hide();
 $('#change-password').hide();
 //$('#change-password').hide();
 $("#collapseFive").hide();
+$("#headingFive").hide();
+$("#collapseFour").hide();
+$("#headingFour").hide();
+$("#collapseThree").hide();
+$("#headingThree").hide();
 
 
 $('.hide-sign').show();
