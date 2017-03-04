@@ -51,7 +51,7 @@ const onChangePassword = function (event) {
 
 
 const addHandlers = () => {
-  $('#change-password').hide();
+  //$('#change-password').hide();
   $('.after-signin').hide();
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
