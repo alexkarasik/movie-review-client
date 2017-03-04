@@ -2,6 +2,7 @@
 
 const api = require('./api.js');
 const ui = require('./ui.js');
+const store = require('../store.js');
 
 
 const getFormFields = require('../../../lib/get-form-fields.js');
@@ -14,6 +15,10 @@ const getFormFields = require('../../../lib/get-form-fields.js');
 const onGetMovies = function (event) {
   event.preventDefault();
   api.showMovies()
+  .then((response) => {
+     store.movies = response.movies;
+     return store;
+   })
   .then(ui.onSuccess)
   .catch(ui.onError);
   };
