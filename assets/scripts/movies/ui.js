@@ -1,6 +1,7 @@
 'use strict';
 
 const movieHandlebars = require('../templates/movieHandlebars.handlebars');
+const store = require('../store.js');
 
 const onSuccess = function (data) {
 
@@ -9,6 +10,9 @@ const onSuccess = function (data) {
   }
   let showMovies = movieHandlebars({ movies: data.movies});
   $('.movie-results').empty().append(showMovies);
+  if (store.movies.length === 0) {
+    $('.message').text("no movies");
+  }
 };
 
 const onError = function (response) {
@@ -25,10 +29,6 @@ const onUpdateMovie = function () {
 
 const onCreateMovie = function () {
     $('.message').text('Your movie was successfully created.');
-
-
-
-
 };
 
 module.exports = {
