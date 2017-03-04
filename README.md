@@ -1,6 +1,9 @@
 # Project Link
 https://alexkarasik.github.io/movie-review-client/
 
+# Link to Back-End Repository
+https://github.com/alexkarasik/movie-review
+
 # ERD link
 My original, rough draft ERD, with some notes I had taken at the time
 http://imgur.com/XdwkEJo
@@ -19,6 +22,11 @@ http://imgur.com/5Q2euZr
 I used HTML, CSS, Ruby on Rails, Javascript and Jquery for this project.
 
 My app is a Movie review/forum for Users to discuss the films of one  of my favorite directors, Werner Herzog as a base, but then users can add any movie that they want and write reviews for those as well and see the reviews and movies added by others. Users are able to look at a list of his films and write their personal reviews of them, based on the ID's of those listed movies.
+
+# How It Works
+I made a Movie Review blog that stores a list of movies that users can edit or add to and then write reviews for and see the reviews and movies of other users.
+There will be a list of 10 movies in the database already set up by the German documentary film maker, Werner Herzog. Users can edit any of these movies as well as add their own.
+Users can also add reviews for these movies, which will be displayed in a separate list. Users can add, edit or delete reviews by identifying them by their Movie ID, which is given to them in the movie list. Users will also be given Review ID's when Reviews have been successfully added, so they can identify the review for the specific movie they want to edit/update or delete.
 
 # User Stories
 
@@ -50,10 +58,8 @@ After implementing handlebars, my front end was in pretty good shape. It was mos
 
 
 # Unsolved problems
-There are quite a few things I would like to add to this project. The biggest thing that stands out is that I would like to be able to add images and the movie trailers as part of the descriptions of the movies themselves. I would like to figure out how to add my data with a 3rd party API as well.
+There are quite a few things I would like to add to this project. The biggest thing that stands out is that I would like to be able to add images and the movie trailers as part of the descriptions of the movies themselves. I would like to figure out how to add data with a 3rd party API as well.
 
-I also want to change the layout to make the movies display horizontally and have the reviews get added underneath the movie they are referencing.
-
-I want to add some color and a background image that fits the personality of the director I admire, Werner Herzog. I think his movies are fascinating and the idea of this app is to get people to have a discussion of his films and any others that they choose. Right now, my app needs more character to stand out to a user.
+I also want to change the layout to make the movies display horizontally and have the reviews get added underneath the movie they are referencing, for clearer user interface.
 
 Also, as a general lesson learned, even through I think I improved in making commits much more frequently than the last project and have overall written more detailed commits, I should have made many more and included many more details in each one. I should have deployed to heroku more often as well. I am developing better habits overall though.
