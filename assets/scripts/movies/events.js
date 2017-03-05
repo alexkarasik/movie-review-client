@@ -37,7 +37,7 @@ const onPatchMovie= function(event){
 
   let data = getFormFields(event.target);
   api.editMovies(data.movie.id, data)
-    .then(ui.onPatchSuccess)
+    .then(ui.onUpdateMovie)
     .catch(ui.onError);
 };
 

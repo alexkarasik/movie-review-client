@@ -10,11 +10,14 @@ const onSuccess = function (data) {
   }
   let showMovies = movieHandlebars({ movies: data.movies});
   $('.movie-results').empty().append(showMovies);
-
+  if (data.movies.length === 0) {
+    $('.message').text("no movies");
+  }
 };
 
 
 const onError = function (response) {
+  debugger
   console.error(response);
 };
 
@@ -27,6 +30,7 @@ const onUpdateMovie = function () {
 };
 
 const onCreateMovie = function () {
+  debugger;
     $('.message').text('Your movie was successfully created.');
 };
 

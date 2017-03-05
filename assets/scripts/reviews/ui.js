@@ -7,11 +7,16 @@ const onSuccess = function (data) {
         console.log(data);
       }
       let showResults = reviewHandlebars({ reviews: data.reviews});
+
       $('.review-results').empty().append(showResults);
+      if (data.reviews.length === 0) {
+        $('.message').text("no reviews");
+      }
     };
 
 
 const onError = function () {
+  debugger
     $('.message').text('ERROR!');
 };
 
@@ -23,7 +28,8 @@ const onPatchSuccess = function () {
   $('.message').text('Your review was successfully edited.');
 };
 
-const onPostSuccess = function () {
+const onCreateReview = function () {
+  debugger
   $('.message').text('Your review was successfully created.');
 };
 
@@ -32,5 +38,5 @@ module.exports = {
   onError,
   onDeleteSuccess,
   onPatchSuccess,
-  onPostSuccess
+  onCreateReview
 };

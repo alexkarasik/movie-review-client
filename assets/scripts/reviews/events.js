@@ -1,14 +1,21 @@
 'use strict';
 
-const api = require('./api.js');
-const ui = require('./ui.js');
+const api = require('./api');
+const ui = require('./ui');
 
-const getFormFields = require('../../../lib/get-form-fields.js');
+const getFormFields = require('../../../lib/get-form-fields');
 const store = require('../store');
 
 const onGetReviews = function (event) {
-  event.preventDefault();
+  if (event.preventDefault) {
+    event.preventDefault();
+  }
+
   api.showReviews()
+  .then((response) => {
+     store.reviews = response.reviews;
+     return store;
+   })
   .then(ui.onSuccess)
   .catch(ui.onError);
 };
@@ -30,17 +37,20 @@ const onPatchReview = function(event){
 };
 
 const onCreateReview = function(event){
+  debugger
   event.preventDefault();
 
   let data = getFormFields(event.target);
-  // console.log(data);
   api.createReviews(data)
-    // .then((response) => {
+    // .then((response) => {fewfew
     //   store.review = response.review;
     //   return store.review;
     // })
-    .then(onGetReviews)
-    .then(ui.onPostSuccess)
+    //.then(onGetReviews)
+    .then(function(data) {
+      onGetReviews(data);
+    })
+    .then(ui.onCreateReview)
     .catch(ui.onError);
 };
 
