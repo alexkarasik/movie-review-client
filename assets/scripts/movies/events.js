@@ -37,7 +37,7 @@ const onPatchMovie= function(event){
 
   let data = getFormFields(event.target);
   api.editMovies(data.movie.id, data)
-    .then(ui.onPatchSuccess)
+    .then(ui.onUpdateMovie)
     .catch(ui.onError);
 };
 
@@ -46,7 +46,7 @@ const onCreateMovie = function(event){
 
   let data = getFormFields(event.target);
   api.createMovies(data)
-    .then(ui.onPostSuccess)
+    .then(ui.onCreateMovie)
     .catch(ui.onError);
 };
 const addHandlers = () => {

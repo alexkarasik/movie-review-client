@@ -16,6 +16,7 @@ const onSuccess = function (data) {
 
 
 const onError = function () {
+  debugger
     $('.message').text('ERROR!');
 };
 
@@ -27,7 +28,8 @@ const onPatchSuccess = function () {
   $('.message').text('Your review was successfully edited.');
 };
 
-const onPostSuccess = function () {
+const onCreateReview = function () {
+  debugger
   $('.message').text('Your review was successfully created.');
 };
 
@@ -36,5 +38,5 @@ module.exports = {
   onError,
   onDeleteSuccess,
   onPatchSuccess,
-  onPostSuccess
+  onCreateReview
 };

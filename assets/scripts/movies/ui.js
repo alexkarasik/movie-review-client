@@ -16,6 +16,7 @@ const onSuccess = function (data) {
 };
 
 const onError = function (response) {
+  debugger
   console.error(response);
 };
 
@@ -28,6 +29,7 @@ const onUpdateMovie = function () {
 };
 
 const onCreateMovie = function () {
+  debugger;
     $('.message').text('Your movie was successfully created.');
 };
 
