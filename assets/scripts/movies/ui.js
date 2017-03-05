@@ -10,7 +10,7 @@ const onSuccess = function (data) {
   }
   let showMovies = movieHandlebars({ movies: data.movies});
   $('.movie-results').empty().append(showMovies);
-  if (store.movies.length === 0) {
+  if (data.movies.length === 0) {
     $('.message').text("no movies");
   }
 };

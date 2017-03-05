@@ -9,6 +9,10 @@ const store = require('../store');
 const onGetReviews = function (event) {
   event.preventDefault();
   api.showReviews()
+  .then((response) => {
+     store.reviews = response.reviews;
+     return store;
+   })
   .then(ui.onSuccess)
   .catch(ui.onError);
 };

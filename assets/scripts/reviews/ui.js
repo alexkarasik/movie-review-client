@@ -7,7 +7,11 @@ const onSuccess = function (data) {
         console.log(data);
       }
       let showResults = reviewHandlebars({ reviews: data.reviews});
+
       $('.review-results').empty().append(showResults);
+      if (data.reviews.length === 0) {
+        $('.message').text("no reviews");
+      }
     };
 
 
