@@ -10,15 +10,9 @@ const onSuccess = function (data) {
   }
   let showMovies = movieHandlebars({ movies: data.movies});
   $('.movie-results').empty().append(showMovies);
-  if (store.movies.length === 0) {
-<<<<<<< HEAD
-    $('#').text("no movies");
-    $('#').fadeIn(1000).delay(1500).fadeOut(300);
-=======
-    $('.message').text("no movies");
->>>>>>> client
-  }
+
 };
+
 
 const onError = function (response) {
   console.error(response);
