@@ -37,7 +37,6 @@ const onPatchReview = function(event){
 };
 
 const onCreateReview = function(event){
-  debugger
   event.preventDefault();
 
   let data = getFormFields(event.target);

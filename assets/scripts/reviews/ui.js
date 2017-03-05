@@ -16,7 +16,6 @@ const onSuccess = function (data) {
 
 
 const onError = function () {
-  debugger
     $('.message').text('ERROR!');
 };
 
@@ -29,7 +28,6 @@ const onPatchSuccess = function () {
 };
 
 const onCreateReview = function () {
-  debugger
   $('.message').text('Your review was successfully created.');
 };
 
