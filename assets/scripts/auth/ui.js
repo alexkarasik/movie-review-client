@@ -22,7 +22,7 @@ const changePasswordSuccess = () => {
 const signInSuccess = () => {
    $('#sign-up').val('');
   //  $('#sign-up').hide();
-   $('.hide-sign').hide();
+   //$('.hide-sign').hide();
    $('#headingOne').hide();
    $('#headingTwo').hide();
   //  $('#change-password').show();
