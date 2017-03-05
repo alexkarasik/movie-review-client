@@ -10,7 +10,7 @@ const onSuccess = function (data) {
 
       $('.review-results').empty().append(showResults);
       if (data.reviews.length === 0) {
-        $('.message').text("no reviews");
+        $('.message').text("Sorry, but there aren't any Reviews in the database yet. Why don't you write one?");
       }
     };
 
@@ -28,7 +28,7 @@ const onPatchSuccess = function () {
 };
 
 const onCreateReview = function () {
-  $('.message').text('Your review was successfully created.');
+  $('.message').text('Your review was successfully added to the database.');
 };
 
 module.exports = {
