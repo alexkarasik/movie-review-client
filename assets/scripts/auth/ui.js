@@ -59,6 +59,7 @@ $("#collapseThree").hide();
 $("#headingThree").hide();
 $('#collapseOne').hide();
 $('#collpaseTwo').hide();
+$('#sign-up').hide();
 
 
 //$('.hide-sign').show();
