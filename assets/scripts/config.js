@@ -3,7 +3,7 @@
 const config = {
   apiOrigins: {
     development: 'http://localhost:4741',
-    production: 'https://salty-everglades-31511.herokuapp.com'
+    production: 'https://limitless-hollows-43358.herokuapp.com/'
   },
 };
 
