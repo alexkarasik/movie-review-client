@@ -21,7 +21,6 @@ const changePasswordSuccess = () => {
 
 const signInSuccess = () => {
    $('#sign-up').val('');
-   $
   //  $('#sign-up').hide();
    //$('.hide-sign').hide();
    $('#headingOne').hide();
