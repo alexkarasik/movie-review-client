@@ -8,8 +8,14 @@ const failure = () => {
   $('.message').text('ERROR!');
 };
 
+$('#headingThree').hide();
+$('#headingFour').hide();
+$('#headingFive').hide();
+
+
 const signUpSuccess = () => {
   //$('#collapseOne').hide();
+  $('#collapseOne').hide();
   $('#sign-up')[0].reset();
   $('.message').text('Successful Sign Up!');
 };
@@ -25,6 +31,7 @@ const signInSuccess = () => {
    //$('.hide-sign').hide();
    $('#headingOne').hide();
    $('#headingTwo').hide();
+   $('#collapseTwo').hide();
   //  $('#change-password').show();
   //  $('.after-signin').show();
   //  $("#collapseFive").show();
@@ -33,6 +40,9 @@ const signInSuccess = () => {
   //  $("#headingFour").show();
   //  $("#collapseThree").show();
   //  $("#headingThree").show();
+  $('#headingThree').show();
+  $('#headingFour').show();
+  $('#headingFive').show();
 
    $('.message').text('Successful Sign In!');
    $('#sign-in')[0].reset();
@@ -49,10 +59,12 @@ $("#collapseThree").hide();
 $("#headingThree").hide();
 
 
-$('.hide-sign').show();
+//$('.hide-sign').show();
 $('#headingOne').show();
 $('#collapseOne').show();
 $('#collpaseTwo').show();
+$('#headingTwo').show();
+
 
 
 $('.message').text('Successful Sign Out!');
