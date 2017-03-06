@@ -21,10 +21,12 @@ const changePasswordSuccess = () => {
 
 const signInSuccess = () => {
    $('#sign-up').val('');
+   $
   //  $('#sign-up').hide();
    //$('.hide-sign').hide();
    $('#headingOne').hide();
    $('#headingTwo').hide();
+   $('#collapseTwo').hide();
   //  $('#change-password').show();
   //  $('.after-signin').show();
   //  $("#collapseFive").show();
