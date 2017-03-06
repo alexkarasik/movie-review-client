@@ -8,8 +8,14 @@ const failure = () => {
   $('.message').text('ERROR!');
 };
 
+$('#headingThree').hide();
+$('#headingFour').hide();
+$('#headingFive').hide();
+
+
 const signUpSuccess = () => {
   //$('#collapseOne').hide();
+  $('#collapseOne').hide();
   $('#sign-up')[0].reset();
   $('.message').text('Successful Sign Up!');
 };
@@ -34,6 +40,9 @@ const signInSuccess = () => {
   //  $("#headingFour").show();
   //  $("#collapseThree").show();
   //  $("#headingThree").show();
+  $('#headingThree').show();
+  $('#headingFour').show();
+  $('#headingFive').show();
 
    $('.message').text('Successful Sign In!');
    $('#sign-in')[0].reset();
