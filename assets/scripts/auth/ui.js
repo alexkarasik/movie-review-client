@@ -64,8 +64,8 @@ $('#sign-up').hide();
 
 //$('.hide-sign').show();
 $('#headingOne').show();
-// $('#collapseOne').show();
-// $('#collpaseTwo').show();
+$('#collapseOne').show();
+$('#collpaseTwo').show();
 $('#headingTwo').show();
 
 
