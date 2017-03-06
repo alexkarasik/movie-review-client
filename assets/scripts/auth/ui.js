@@ -57,6 +57,8 @@ $("#collapseFour").hide();
 $("#headingFour").hide();
 $("#collapseThree").hide();
 $("#headingThree").hide();
+$('#collapseOne').hide();
+$('#collpaseTwo').hide();
 
 
 //$('.hide-sign').show();
