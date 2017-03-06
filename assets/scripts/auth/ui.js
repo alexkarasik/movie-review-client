@@ -50,8 +50,9 @@ $("#collapseThree").hide();
 $("#headingThree").hide();
 
 
-$('.hide-sign').show();
+//$('.hide-sign').show();
 $('#headingOne').show();
+$('#headingTwo').show();
 
 
 $('.message').text('Successful Sign Out!');
