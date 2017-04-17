@@ -14,7 +14,6 @@ const onSignUp = function (event) {
  .catch(ui.failure);
 };
 
-
 const onSignIn = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);

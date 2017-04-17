@@ -67,6 +67,9 @@ $('#headingOne').show();
 $('#collapseOne').show();
 $('#collpaseTwo').show();
 $('#headingTwo').show();
+$('#sign-up').show();
+$('#sign-up').show();
+
 
 
 
